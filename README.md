@@ -14,11 +14,13 @@ A css + sass realization of [Solarized](http://ethanschoonover.com/solarized).
 
 ## On Your Site
 
-**HTML**  
+**HTML** 
+
     <link rel="stylesheet" href="path/to/css-solarized.css" />
 
 
-**styles.scss**  
+**styles.scss** 
+
     @import "css-solarized/solarized";
     @include "solar-classes";
     // Or just extend with placeholders
