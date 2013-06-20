@@ -21,6 +21,6 @@ A css + sass realization of [Solarized](http://ethanschoonover.com/solarized).
 
 **styles.scss** 
 
-    @import "css-solarized/solarized";
+    @import "css-solarized/css-solarized";
     @include "solar-classes";
     // Or just extend with placeholders

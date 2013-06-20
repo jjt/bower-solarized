@@ -1,0 +1,6 @@
+{
+  name: "css-solarized",
+  version: "0.1.0",
+  main: "css-solarized.css",
+  ignore: ".sass-cache"
+}
