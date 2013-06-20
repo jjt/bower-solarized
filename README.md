@@ -1,26 +1,21 @@
-# css-solarized
+# bower-solarized
 
 A css + sass realization of [Solarized](http://ethanschoonover.com/solarized).
+Installation via Bower (preferred): `bower install solarized`,
+or cloning into your site assets:
+`git clone git@github.com:jjt/bower-solarized.git`.
 
-## Installation
+## Add To Your Site
 
-#### Bower (preferred)
+**CSS/HTML**
 
-    bower install css-solarized
-
-#### Manual
-
-    git clone git@github.com:jjt/css-solarized.git path/to/css/files/css-solarized
-
-## On Your Site
-
-**HTML** 
-
-    <link rel="stylesheet" href="path/to/css-solarized.css" />
+    <link rel="stylesheet" href="path-to-solarized/css/solarized.css" />
 
 
-**styles.scss** 
+**Sass** 
 
-    @import "css-solarized/css-solarized";
-    @include "solar-classes";
-    // Or just extend with placeholders
+    // Just Sass placeholders, no CSS classes output
+    @import "path-to-solarized/scss/solarized";
+
+    // CSS classes and placeholders
+    @import "path-to-solarized/scss/solarized-classes";
