@@ -1,0 +1,70 @@
+// css-solarized
+// Colors borrowed from the wonderful http://ethanschoonover.com/solarized
+
+$solar-accent-colors: #B58900 #CB4B16 #DC322F #D33682 #6C71C4 #268BD2 #2AA198 #859900;
+$solar-accent-names: yellow orange red magenta violet blue cyan green; 
+$solar-base-colors: #002B36 #073642 #586E75 #657B83 #839496 #93A1A1 #EEE8D5 #FDF6E3;
+$solar-base-names: "03" "02" "01" "00" "0" "1" "2" "3";
+
+@mixin solar-placeholders() {
+  $i: 1;
+  @each $color in $solar-accent-colors {
+    $color-name: nth($solar-accent-names, $i);
+    %solar-#{$color-name}, %solar-a#{$i} {
+      color: $color;
+    }
+    %solar-bg-#{$color-name}, %solar-bg-a#{$i} {
+      background-color: $color;
+    }
+    $i: $i + 1;
+  }
+
+  $i: 1;
+  @each $color in $solar-base-colors {
+    $color-name: nth($solar-base-names, $i);
+    %solar-#{$color-name}, %solar-b#{$i} {
+      color: $color;
+    }
+    %solar-bg-#{$color-name}, %solar-bg-b#{$i} {
+      background-color: $color;
+    }
+    $i: $i + 1;
+  }
+}
+@include solar-placeholders;
+
+
+@mixin solar-accent-classes {
+  $i: 1;
+  @each $color in $solar-accent-colors {
+    $color-name: nth($solar-accent-names, $i);
+    .solar-#{$color-name}, .solar-a#{$i} {
+      @extend %solar-#{$color-name};
+    }
+    .solar-bg-#{$color-name}, .solar-bg-a#{$i} {
+      @extend %solar-bg-#{$color-name};
+    }
+    $i: $i + 1;
+  }
+}
+
+
+@mixin solar-base-classes {
+  $i: 1;
+  @each $color in $solar-base-colors {
+    $color-name: nth($solar-base-names, $i);
+    .solar-#{$color-name}, .solar-b#{$i} {
+      @extend %solar-#{$color-name};
+    }
+    .solar-bg-#{$color-name}, .solar-bg-b#{$i} {
+      @extend %solar-bg-#{$color-name};
+    }
+    $i: $i + 1;
+  }
+}
+
+
+@mixin solar-classes {
+  @include solar-accent-classes;
+  @include solar-base-classes;
+}
